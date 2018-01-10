@@ -14,7 +14,8 @@ build:
   number: 2
   skip: True  # [win]
   run_exports:
-    # unknown.  Assuming defaults.
+    # excellent backwards compatibility
+    # https://abi-laboratory.pro/tracker/timeline/libgpg-error/
     - {{ pin_subpackage('libgpg-error') }}
 
 requirements:
