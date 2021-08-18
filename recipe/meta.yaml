@@ -22,8 +22,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make  # [unix]
-
+    - make     # [unix]
+    - libtool  # [unix]
 test:
   commands:
     - test -f $PREFIX/lib/libgpg-error.so  # [linux]
