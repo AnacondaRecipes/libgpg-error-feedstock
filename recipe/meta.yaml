@@ -34,10 +34,18 @@ test:
     - conda inspect objects {{ name }}  # [osx]
 
 about:
-  home: https://gnupg.org/software/index.html
-  license: GPL-2.0
-  license_family: GPL2
+  home: https://gnupg.org/software/libgpg-error/index.html
+  doc_url: https://gnupg.org/software/libgpg-error/index.html
+  dev_url: https://github.com/gpg/libgpg-error
+  license: LGPL-2.1-or-later
+  license_family: LGPL
+  license_file:
+    - AUTHORS
+    - COPYING.LIB
   summary: 'a small library that originally defined common error values for all GnuPG components'
+  description: Libgpg-error is a small library that originally defined common error values for all 
+    GnuPG components. Among these are GPG, GPGSM, GPGME, GPG-Agent, 
+    libgcrypt, Libksba, DirMngr, Pinentry, SCdaemon.
 
 extra:
   recipe-maintainers:
