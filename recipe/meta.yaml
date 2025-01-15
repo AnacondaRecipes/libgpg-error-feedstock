@@ -1,14 +1,13 @@
 {% set name = "libgpg-error" %}
-{% set version = "1.42" %}
-{% set sha256 = "fc07e70f6c615f8c4f590a8e37a9b8dd2e2ca1e9408f8e60459c67452b925e23" %}
+{% set version = "1.51" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gnupg.org/ftp/gcrypt/libgpg-error/{{ name }}-{{ version }}.tar.bz2
-  sha256: {{ sha256 }}
+  url: https://gnupg.org/ftp/gcrypt/{{ name }}/{{ name }}-{{ version }}.tar.bz2
+  sha256: be0f1b2db6b93eed55369cdf79f19f72750c8c7c39fc20b577e724545427e6b2
 
 build:
   number: 0
@@ -21,9 +20,10 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - make     # [unix]
-    - libtool  # [unix]
+    - make
+    - pkg-config
+    - gettext
+
 test:
   commands:
     - test -f $PREFIX/lib/libgpg-error.so  # [linux]
