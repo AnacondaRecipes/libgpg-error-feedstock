@@ -25,6 +25,9 @@ requirements:
     - gettext
 
 test:
+  requires:
+    # Needed to run conda inspect, esp. on osx
+    - conda-bld
   commands:
     - test -f $PREFIX/lib/libgpg-error.so  # [linux]
     - conda inspect linkages {{ name }}
