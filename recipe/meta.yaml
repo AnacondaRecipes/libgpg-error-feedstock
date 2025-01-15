@@ -27,7 +27,7 @@ requirements:
 test:
   requires:
     # Needed to run conda inspect, esp. on osx
-    - conda-bld
+    - conda-build
   commands:
     - test -f $PREFIX/lib/libgpg-error.so  # [linux]
     - conda inspect linkages {{ name }}
