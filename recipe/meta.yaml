@@ -36,7 +36,7 @@ test:
 about:
   home: https://gnupg.org/software/libgpg-error/index.html
   doc_url: https://gnupg.org/software/libgpg-error/index.html
-  dev_url: https://github.com/gpg/libgpg-error
+  dev_url: https://git.gnupg.org/cgi-bin/gitweb.cgi?p=libgpg-error.git
   license: LGPL-2.1-or-later
   license_family: LGPL
   license_file:
