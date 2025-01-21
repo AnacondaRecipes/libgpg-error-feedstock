@@ -29,7 +29,7 @@ test:
     # Needed to run conda inspect, esp. on osx
     - conda-build
   commands:
-    - test -f $PREFIX/lib/libgpg-error.${SHLIB_EXT}
+    - test -f $PREFIX/lib/libgpg-error${SHLIB_EXT}
     - test -f $PREFIX/bin/gpg-error
     - test -f $PREFIX/bin/gpgrt-config
     - test -f $PREFIX/bin/yat2m
