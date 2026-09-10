@@ -1,8 +1,8 @@
 {% set name = "libgpg-error" %}
-{% set version = "1.58" %}
+{% set version = "1.61" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   run_exports:
     # excellent backwards compatibility
     # https://abi-laboratory.pro/tracker/timeline/libgpg-error/
@@ -56,3 +56,7 @@ extra:
   recipe-maintainers:
     - martindurant
     - mariusvniekerk
+  skip-lints:
+    # for dev_url, according to upstream https://git.gnupg.org/cgi-bin/gitweb.cgi:
+    # This is due to heavy attacks caused by AI scrapers. The gitweb interface is disabled temporarily.
+    - reachable_url
